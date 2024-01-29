@@ -1,0 +1,7 @@
+terravenche
+
+BUILD:
+Bootloader with NASM:
+nasm -f bin bootloader.asm terravenche.img
+
+You'll get an .img file which can be used in programs like VirtualBox.
