@@ -1,6 +1,6 @@
-bits 32
+[bits 32]
 
-extern main
+[extern main]
 call main
 
 times 510 - ($ - $$) db 0
