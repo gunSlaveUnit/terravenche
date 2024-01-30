@@ -1,9 +1,9 @@
 terravenche
 
 BUILD:
-clang -m32 -ffreestanding .\entrypoint.c -o entrypoint.o
-nasm -f elf .\bootloader.asm -o .\bootloader.o
-ld -m i386pe .\bootloader.o .\entrypoint.o -o terravenche.tmp
+clang -m32 -ffreestanding entrypoint.c -o entrypoint.o
+nasm -f elf bootloader.asm -o bootloader.o
+ld -m i386pe bootloader.o entrypoint.o -o terravenche.tmp
 objcopy -O binary terravenche.tmp terravenche.img
 
 You'll get an .img file which can be used in programs like VirtualBox.
